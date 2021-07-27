@@ -23,11 +23,13 @@
     "@opam/tablecloth-native": "*",
     "@opam/uri": "*",
     "fetch-native-lwt": "lessp/fetch:fetch-native-lwt.json",
-    "ocaml": "*",
-    "refmterr": "*"
+    "refmterr": "*",
+    "ocaml": "4.12.x",
+    "melange": "melange-re/melange"
   },
   "devDependencies": {
-    "@opam/merlin": "*"
+    "ocaml": "4.12.x",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
   },
   "resolutions": {
     "@esy-ocaml/reason": "EduardoRFS/reason:reason.json#35aa4df3de0daa60bdc1133dcf97855decac48f7",
