@@ -1,4 +1,4 @@
-open Opium.Std;
+open Opium;
 open Lwt.Infix;
 
 let auth_header =

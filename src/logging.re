@@ -1,5 +1,6 @@
-open Opium.Std;
-open Lwt.Infix;
+open Opium;
+// open Lwt.Infix;
+let ( >|=) = Lwt.Infix.infix( ">|=" );
 
 /* This is done to demonstrate a usecase where the log reporter is returned via
    a Lwt promise */
@@ -7,7 +8,7 @@ let log_reporter = () => Lwt.return(Logs_fmt.reporter());
 
 let logger = {
   let filter = (handler, req) => {
-    let uri = Request.uri(req) |> Uri.path_and_query;
+    let uri = Opium.Request.uri(req) |> Uri.path_and_query;
     handler(req)
     >|= (
       response => {
